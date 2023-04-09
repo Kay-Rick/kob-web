@@ -79,7 +79,11 @@ export class GameMap extends AcGameObject {
   }
 
   start() {
-    this.create_walls();
+    for (let i = 0; i < 1000; i++) {
+      if (this.create_walls()) {
+        break;
+      }
+    }
   }
 
 
